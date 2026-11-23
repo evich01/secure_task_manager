@@ -1,0 +1,107 @@
+GET http://localhost:3000
+
+
+###
+GET http://localhost:3000/user/6a014f96712490ef50785745
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAxNGY5NjcxMjQ5MGVmNTA3ODU3NDUiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJkQGdtYWlsLmNvbSIsImlhdCI6MTc3ODU3NjIwMywiZXhwIjoxNzc4NTc4MDAzfQ.CjokFBMh0aFk6wkQZ1-7IKH4zD90Ni-GjWNK2HREOiE
+
+###
+POST http://localhost:3000/signup
+Content-Type: application/json
+
+{
+     "name": "Dennis",
+      "age": "15",
+      "email": "d@gmail.com",
+      "password": "123",
+      "role": "manager"
+}
+
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+      "email": "d@gmail.com",
+      "password": "123"
+}
+
+###
+GET http://localhost:4000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAyMThmOGEyNTk5MTViYWYxYTg0NTciLCJuYW1lIjoiRGVubmlzIE9mb3JpLVBhbmluIiwiZW1haWwiOiJkZUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg2MTI2NzMsImV4cCI6MTc3ODYxNDQ3M30.e9WVrrWnP9AoB-oSpW7F1-hFDEQ1l5EnRjoO1vrVuiE
+
+
+###
+POST http://localhost:3000/token 
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTA2MDgzNzdlYzY0ZTg5NTc3M2FkZGMiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Nzg3OTU3NjIsImV4cCI6MTc3ODg4MjE2Mn0.wPDk3B2UvtBpJSSrJVjJvI25Ts-bTgzROmsnZvZD-pw"
+}
+
+
+###
+POST http://localhost:4000/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAyMThmOGEyNTk5MTViYWYxYTg0NTciLCJuYW1lIjoiRGVubmlzIE9mb3JpLVBhbmluIiwiZW1haWwiOiJkZUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg2MTI2NzMsImV4cCI6MTc3ODYxNDQ3M30.e9WVrrWnP9AoB-oSpW7F1-hFDEQ1l5EnRjoO1vrVuiE
+
+Content-Type: application/json
+
+{
+      "post": "Heyy, I'm Dennis"
+}
+
+###
+GET  http://localhost:4000/post/6a037be74d914022c32cb5d9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAyMThmOGEyNTk5MTViYWYxYTg0NTciLCJuYW1lIjoiRGVubmlzIE9mb3JpLVBhbmluIiwiZW1haWwiOiJkZUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg2MTI2NzMsImV4cCI6MTc3ODYxNDQ3M30.e9WVrrWnP9AoB-oSpW7F1-hFDEQ1l5EnRjoO1vrVuiE
+
+
+
+###
+PATCH  http://localhost:4000/update/6a015119aa4feb6cca6d4776
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTAyMThmOGEyNTk5MTViYWYxYTg0NTciLCJuYW1lIjoiRGVubmlzIE9mb3JpLVBhbmluIiwiZW1haWwiOiJkZUBnbWFpbC5jb20iLCJpYXQiOjE3Nzg2MTI2NzMsImV4cCI6MTc3ODYxNDQ3M30.e9WVrrWnP9AoB-oSpW7F1-hFDEQ1l5EnRjoO1vrVuiE
+
+Content-Type: application/json
+
+{
+      "post": "Heyy, I'm Dennis and I will love programming"
+}
+
+
+###
+DELETE  http://localhost:3000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTA1Zjc4OTA2YzdjNzY4ZGExMTg0NGEiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Nzg3Nzc1MTIsImV4cCI6MTc3ODc3ODQxMn0._Gao2hJaRtkeHgsCCClvLw4aE0_cKOT0Kln15s4lOeo
+
+Content-Type: application/json
+
+{
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTA1Zjc4OTA2YzdjNzY4ZGExMTg0NGEiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Nzg3NzY1NjcsImV4cCI6MTc3ODg2Mjk2N30.l1kgpzwxCWXp7A2pzVTt-mi3rGwmfp8iAlRTC7UnLH0"
+
+}
+
+###
+PATCH http://localhost:3000/user/6a0e0dca748f83b8b327a995
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBlMGRjYTc0OGY4M2I4YjMyN2E5OTUiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJkQGdtYWlsLmNvbSIsImlhdCI6MTc4MDE1ODYzNiwiZXhwIjoxNzgwMTU5NTM2fQ.jU63TpVktAm7ysGMSzZXzFUc4aoKQc3Cx_v-Q1Brt6U
+
+Content-Type: application/json
+
+{
+"name": "Dennisss",
+   "current_password": "123",
+   "new_password": "123"
+}
+
+
+###
+DELETE  http://localhost:3000/user/6a060f2583d14b5fe7c11b33
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTA2MDgzNzdlYzY0ZTg5NTc3M2FkZGMiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3Nzg3ODE4MTAsImV4cCI6MTc3ODc4MjcxMH0.rBhsRNENQ_oBpvmY7901YBOI-yltlGbdd1lmfMU2XIo
+
+
+###
+PATCH http://localhost:3000/user/reset/6a0dfd04c441db5a9a0cba05
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTBkZmQwNGM0NDFkYjVhOWEwY2JhMDUiLCJuYW1lIjoiRGVubmlzIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3ODAxNTk1NzksImV4cCI6MTc4MDE2MDQ3OX0.kewnVsq8iE3qV4vLet-OjyFiunJEcHwKuhjMqcN0iaQ
+
+Content-Type: application/json
+
+{
+      "new_password": "123"
+}
